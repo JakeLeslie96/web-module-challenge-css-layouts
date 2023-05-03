@@ -52,13 +52,14 @@ table {
     width: 50px;
 } */
 
-
+body{
+	font-size: 62.5%;
+}
 .header h1{
 	display: flex;
 	justify-content:center;
 	flex-flow: row wrap;
-	margin: 1.5%;
-	font-size: 200%;
+	font-size: 3rem;
 	color: olivedrab;
 }
 .header nav{
@@ -67,6 +68,8 @@ table {
 	width: 12%;
 	margin: 0 auto;
 	color: olivedrab;
+	font-size: 1rem;
+	margin-top: 2%;
 }
 
 .header a{
@@ -74,14 +77,17 @@ table {
 	padding: 2.5%;
 	padding-left: 10%;
 	padding-right: 10%;
-	background-color: rgb(254, 140, 2);}
+	background-color: powderblue;
+	color: green;
+}
 
 .intro h2{
 	display: flex;
 	justify-content: center;
 	margin-top: 2.5%;
-	font-size: 150%;
+	font-size: 1.75rem;
 	margin-bottom: 1.25%;
+	color: saddlebrown;
 }
 
 .intro .text{
@@ -90,43 +96,94 @@ table {
 	margin-top: 1.25%;
 	width: 50%;
 	margin: 0 auto;
+	font-size: 1rem;
+	text-align: center;
+	color: saddlebrown;
 }
 
 .intro .hoggy{
-	margin-top: 2.5%;
-	max-width: 100%;
+	display: flex;
+	margin-top: 2%;
+	width: 100%;
 	height: auto;
 }
 
-.stacked .pictures{
+.pictures{
 	display: flex;
-	height: 20vh;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	padding: 1%;
-}
-.stacked .description{
-	display: flex;
-	flex-flow: row-reverse wrap;	
-	
+	max-width: 100%;
 }
 
-.stacked p{
-	width: 20%;
-	margin: auto;
+.pictures img{
+	width: 17%;
+}
+
+.description{
+	font-size: .9rem;
+	display: flex;
+	flex-flow: row-reverse wrap;
+	justify-content: center;
+	align-content: center;
 	text-align: center;
+	width: 25%;
+	color: saddlebrown;
+
 }
 
-.cont{
+.cont a{
 	display: flex;
-	height: 100px;
+	width: 100%;
+	height: 5vh;
 	justify-content: center;
 	align-items: center;
 	background-color: rgb(83, 175, 141);
-	font-size: 150%;
+	font-size: 1.6rem;
+	color: saddlebrown;
 }
 body{
 	background-image:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.freepik.com%2Ffree-photo%2Fabstract-art-background-light-olive-green-colors-watercolor-painting-canvas-with-soft-iviry-gradient_113767-2939.jpg&f=1&nofb=1&ipt=7e04cdaf3a61771403b9f51e336bfa11a36b8016851da67ede28293d1c6dd055&ipo=images) ;
 }
-.stacked .empty{
-	width: 1%;
+
+@media (max-width: 800px){
+	.header nav{
+		flex-direction: column;
+		text-align: center;
+		width: 7%;
+}
+	.pictures{
+		flex-wrap: wrap;
+	}
+	.pictures img{
+		width: 45%;
+		margin: 4% 0;
+	}
+	.description{
+		width: 50%;
+		margin: 2% 0;
+		line-height: 1.4;	
+		font-size: 1rem;	
+	
+	}
+}
+
+@media (max-width: 400px){
+	.header nav{
+		flex-direction: column;
+		text-align: center;
+		width: 7%;
+}
+	.pictures{
+		flex-wrap: wrap;
+	}
+	.pictures img{
+		width: 75%;
+		margin: 4% 0;
+	}
+	.description{
+		width: 50%;
+		margin: 2% 0;
+		line-height: 1.4;	
+		font-size: .6rem;	
+	}
 }
